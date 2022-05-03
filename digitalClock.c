@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <windows.h>
+
+void green () {
+    printf("\033[0;32m");
+}
+
+void red () {
+    printf("\033[1;31m");
+}
+
+int main()
+{
+    int h,m,s;
+    int d = 1000; //delay of 1000 milliseconds 
+    printf("Set time: \n");
+    scanf("%d%d%d", &h,&m,&s);
+    if(h>12 || m>60 || s>60)
+    {
+        red();
+        printf("ERROR!\n");
+        exit(0);
+    }
+    while(1) //this is an infinite loop and anything inside will repeat itself to infinity
+    {
+        s++;
+        if(s>59)
+        {
+            m++;
+            s=0;
+        }
+        if(m>59)
+        {
+            h++;
+            m=0;
+        }
+        if(h>12)
+        {
+            h=1;
+        }
+        printf("\n Clock : ");
+        green();
+        printf("\n %02d:%02d:%02d",h,m,s); // this write our time in this format 00:00:00
+        Sleep(d); //the function sleep slows down the while loop and make it more like a real clock
+        
+        system("cls"); //this clears the screen
+    }
+}
