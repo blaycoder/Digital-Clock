@@ -6,7 +6,7 @@ When the time starts, the time colour turns GREEN
 When the wrong time is entered, it displays an error message with a RED text colour
 
 
-# The project helped me to have a better understanding on C. I made findings online on how to add colour to a text in C.
+The project helped me to have a better understanding on C. I made findings online on how to add colour to a text in C.
 
 Reference:
 Programming Tests and Projects (Youtube)
